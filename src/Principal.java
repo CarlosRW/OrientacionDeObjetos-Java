@@ -1,10 +1,11 @@
 import carlosramirez.screenmach.modelos.Pelicula;
 import carlosramirez.screenmach.modelos.Serie;
+import carlosramirez.screenmatch.calculos.CalculadoraDeTiempo;
 
 public class Principal {
     public static void main(String[] args) {
         // Orientación de objetos
-        // Llama a la clase carlosramirez.screenmach.modelos.Pelicula
+        // Llama a la clase Pelicula
         Pelicula pelicula = new Pelicula();
 
         // Da información a las variables
@@ -25,13 +26,32 @@ public class Principal {
         // Media de la película
         System.out.println("Media de evaluaciones de la película: " + pelicula.calculaMediaEvaluaciones());
 
+        // Llama a la clase Serie
         Serie serie = new Serie();
+        // Información de la serie
         serie.setNombre("The Last Of Us");
         serie.setFechaDeLanzamiento(2012);
         serie.setTemporadas(2);
         serie.setMinutosPorEpisodio(59);
         serie.setEpisodiosPorTemporada(8);
+        // Mostrar datos de pelicula
         serie.muestraDatosDePelicula();
+        // Mostrar duración en minutos totales
         System.out.println(serie.getDuracionEnMinutos());
+
+        // Llama a la clase Pelicula (2)
+        Pelicula peliculaDos = new Pelicula();
+        // Da información a las variables
+        peliculaDos.setNombre("Orgullo y Prejuicio");
+        peliculaDos.setFechaDeLanzamiento(2005);
+        peliculaDos.setDuracionEnMinutos(128);
+
+        // Llama a la clase CalculadoraDeTiempo
+        CalculadoraDeTiempo calculadora = new CalculadoraDeTiempo();
+        calculadora.incluye(pelicula);
+        calculadora.incluye(serie);
+        calculadora.incluye(peliculaDos);
+        System.out.println("Tiempo necesario para ver tus titulos favoritos: " + calculadora.getTiempoTotal() + " minutos");
+
     }
 }
