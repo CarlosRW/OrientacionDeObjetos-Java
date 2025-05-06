@@ -1,4 +1,5 @@
 import carlosramirez.screenmach.modelos.Pelicula;
+import carlosramirez.screenmach.modelos.Serie;
 
 public class Principal {
     public static void main(String[] args) {
@@ -24,25 +25,13 @@ public class Principal {
         // Media de la película
         System.out.println("Media de evaluaciones de la película: " + pelicula.calculaMediaEvaluaciones());
 
-
-
-
-
-
-
-//        // Da información a las variables
-//        carlosramirez.screenmach.modelos.Pelicula pelicula2 = new carlosramirez.screenmach.modelos.Pelicula();
-//        pelicula2.nombre = "The Amazing Spider-Man";
-//        pelicula2.fechaDeLanzamiento = 2012;
-//        pelicula2.duracionEnMinutos = 136;
-
-//        // Imprimir datos de la película
-//        pelicula2.muestraDatosDePelicula();
-//        // Evaluaciones
-//        pelicula2.evaluarPelicula(10);
-//        pelicula2.evaluarPelicula(10);
-//
-//        // Media de la película
-//        System.out.println("Media de evaluaciones de la película: " + pelicula.calculaMediaEvaluaciones());
+        Serie serie = new Serie();
+        serie.setNombre("The Last Of Us");
+        serie.setFechaDeLanzamiento(2012);
+        serie.setTemporadas(2);
+        serie.setMinutosPorEpisodio(59);
+        serie.setEpisodiosPorTemporada(8);
+        serie.muestraDatosDePelicula();
+        System.out.println(serie.getDuracionEnMinutos());
     }
 }
