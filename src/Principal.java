@@ -3,14 +3,20 @@ public class Principal {
         // Orientación de objetos
         // Llama a la clase Pelicula
         Pelicula pelicula = new Pelicula();
+
         // Da información a las variables
         pelicula.nombre = "Iron Man";
         pelicula.fechaDeLanzamiento = 2008;
         pelicula.duracionEnMinutos = 120;
-        // Imprimir datos de la película 1
-        System.out.println("La película: " + pelicula.nombre);
-        System.out.println("Fecha de lanzamiento: " + pelicula.fechaDeLanzamiento);
-        System.out.println("Duracion: " + pelicula.duracionEnMinutos);
+
+        // Imprimir datos de la película
+        pelicula.muestraDatosDePelicula();
+        // Evalua la película
+        pelicula.evaluarPelicula(8.5);
+        pelicula.evaluarPelicula(10);
+
+        // Media de la película
+        System.out.println("Media de evaluaciones de la película: " + pelicula.calculaMediaEvaluaciones());
 
         // Da información a las variables
         Pelicula pelicula2 = new Pelicula();
@@ -18,8 +24,12 @@ public class Principal {
         pelicula2.fechaDeLanzamiento = 2012;
         pelicula2.duracionEnMinutos = 136;
 
-        System.out.println("La pelicula 2: " + pelicula2.nombre);
-        System.out.println("Fecha de lanzamiento: " + pelicula2.fechaDeLanzamiento);
-        System.out.println("Duracion: " + pelicula2.duracionEnMinutos);
+        // Imprimir datos de la película
+        pelicula2.muestraDatosDePelicula();
+        pelicula2.evaluarPelicula(10);
+        pelicula2.evaluarPelicula(10);
+
+        // Media de la película
+        System.out.println("Media de evaluaciones de la película: " + pelicula.calculaMediaEvaluaciones());
     }
 }
