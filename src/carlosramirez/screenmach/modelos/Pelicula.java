@@ -1,6 +1,8 @@
 package carlosramirez.screenmach.modelos;
 
-public class Pelicula extends Titulo {
+import carlosramirez.screenmatch.calculos.Clasificable;
+
+public class Pelicula extends Titulo implements Clasificable {
     // Variables
     private String director;
 
@@ -11,5 +13,10 @@ public class Pelicula extends Titulo {
 
     public void setDirector(String director) {
         this.director = director;
+    }
+
+    @Override
+    public int getClasificacion() {
+        return (int) (calculaMediaEvaluaciones() / 2);
     }
 }

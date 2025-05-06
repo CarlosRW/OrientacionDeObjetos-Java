@@ -1,6 +1,8 @@
+import carlosramirez.screenmach.modelos.Episodio;
 import carlosramirez.screenmach.modelos.Pelicula;
 import carlosramirez.screenmach.modelos.Serie;
 import carlosramirez.screenmatch.calculos.CalculadoraDeTiempo;
+import carlosramirez.screenmatch.calculos.FiltroRecomendacion;
 
 public class Principal {
     public static void main(String[] args) {
@@ -53,5 +55,17 @@ public class Principal {
         calculadora.incluye(peliculaDos);
         System.out.println("Tiempo necesario para ver tus titulos favoritos: " + calculadora.getTiempoTotal() + " minutos");
 
+        // Llama la clase FiltroRecomendacion
+        FiltroRecomendacion filtroRecomendacion = new FiltroRecomendacion();
+        filtroRecomendacion.filtra(pelicula);
+
+        // Llama la clase Episodio
+        Episodio episodio = new Episodio();
+        episodio.setNumero(5);
+        episodio.setNombre("Please Hold on to My Hand");
+        episodio.setSerie(serie);
+        episodio.setTotalVisualizaciones(50);
+
+        filtroRecomendacion.filtra(episodio);
     }
 }
