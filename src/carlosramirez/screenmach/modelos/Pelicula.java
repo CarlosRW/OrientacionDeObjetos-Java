@@ -6,6 +6,10 @@ public class Pelicula extends Titulo implements Clasificable {
     // Variables
     private String director;
 
+    public Pelicula(String nombre) {
+        this.setNombre(nombre);
+    }
+
     // Getteres & Setters
     public String getDirector() {
         return director;
@@ -18,5 +22,10 @@ public class Pelicula extends Titulo implements Clasificable {
     @Override
     public int getClasificacion() {
         return (int) (calculaMediaEvaluaciones() / 2);
+    }
+
+    @Override
+    public String toString() {
+        return "Pelicula: " + this.getNombre() + "(" + getFechaDeLanzamiento() + ")";
     }
 }

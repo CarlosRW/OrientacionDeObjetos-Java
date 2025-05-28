@@ -3,15 +3,15 @@ import carlosramirez.screenmach.modelos.Pelicula;
 import carlosramirez.screenmach.modelos.Serie;
 import carlosramirez.screenmatch.calculos.CalculadoraDeTiempo;
 import carlosramirez.screenmatch.calculos.FiltroRecomendacion;
+import java.util.ArrayList;
 
 public class Principal {
     public static void main(String[] args) {
         // Orientación de objetos
         // Llama a la clase Pelicula
-        Pelicula pelicula = new Pelicula();
+        Pelicula pelicula = new Pelicula("The Amazing Spider-Man");
 
-        // Da información a las variables
-        pelicula.setNombre("The Amazing Spider-Man");
+        // Da información a las variables;
         pelicula.setFechaDeLanzamiento(2012);
         pelicula.setDuracionEnMinutos(136);
 
@@ -42,9 +42,8 @@ public class Principal {
         System.out.println(serie.getDuracionEnMinutos());
 
         // Llama a la clase Pelicula (2)
-        Pelicula peliculaDos = new Pelicula();
+        Pelicula peliculaDos = new Pelicula("Orgullo y Prejuicio");
         // Da información a las variables
-        peliculaDos.setNombre("Orgullo y Prejuicio");
         peliculaDos.setFechaDeLanzamiento(2005);
         peliculaDos.setDuracionEnMinutos(128);
 
@@ -67,5 +66,22 @@ public class Principal {
         episodio.setTotalVisualizaciones(50);
 
         filtroRecomendacion.filtra(episodio);
+
+        var peliculaDeCarlos = new Pelicula("El Señor de los Anillos: El Retorno del Rey");
+        peliculaDeCarlos.setFechaDeLanzamiento(2001);
+        peliculaDeCarlos.setDuracionEnMinutos(180);
+
+        ArrayList<Pelicula> listaDePeliculas = new ArrayList<>();
+        listaDePeliculas.add(peliculaDeCarlos);
+        listaDePeliculas.add(pelicula);
+        listaDePeliculas.add(peliculaDos);
+        
+        System.out.println("Tamaño de la lista de películas: " + listaDePeliculas.size());
+        System.out.println("La primera película es: " + listaDePeliculas.get(0).getNombre());
+
+        System.out.println(listaDePeliculas.toString());
+
+        System.out.println("toString de la pelicula: " + listaDePeliculas.get(0).toString());
+
     }
 }
