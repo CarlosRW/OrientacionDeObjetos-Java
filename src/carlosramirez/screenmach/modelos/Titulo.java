@@ -1,6 +1,7 @@
 package carlosramirez.screenmach.modelos;
 
 public class Titulo {
+
     // Variables
     private String nombre;
     private int fechaDeLanzamiento;
@@ -8,6 +9,12 @@ public class Titulo {
     private boolean incluidoEnElPlan = true;
     private double sumaDeLasEvaluaciones;
     private int totalDeLasEvaluaciones;
+
+    // Constructor
+    public Titulo(String nombre, int fechaDeLanzamiento) {
+        this.fechaDeLanzamiento = fechaDeLanzamiento;
+        this.nombre = nombre;
+    }
 
     // Método para mostrar los datos de las películas
     public void muestraDatosDePelicula() {

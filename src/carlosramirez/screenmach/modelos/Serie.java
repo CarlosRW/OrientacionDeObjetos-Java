@@ -1,10 +1,16 @@
 package carlosramirez.screenmach.modelos;
 
 public class Serie extends Titulo {
+
     // Variables
     int temporadas;
     int episodiosPorTemporada;
     int minutosPorEpisodio;
+
+    // Constructor
+    public Serie(String nombre, int fechaDeLanzamiento) {
+        super(nombre, fechaDeLanzamiento);
+    }
 
     // Getters and Setters
     public int getTemporadas() {

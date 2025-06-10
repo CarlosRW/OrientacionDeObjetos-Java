@@ -3,11 +3,13 @@ package carlosramirez.screenmach.modelos;
 import carlosramirez.screenmatch.calculos.Clasificable;
 
 public class Pelicula extends Titulo implements Clasificable {
+
     // Variables
     private String director;
 
-    public Pelicula(String nombre) {
-        this.setNombre(nombre);
+    // Constructor
+    public Pelicula(String nombre, int fechaDeLanzamiento) {
+        super(nombre, fechaDeLanzamiento);
     }
 
     // Getteres & Setters

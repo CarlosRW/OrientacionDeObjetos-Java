@@ -1,3 +1,4 @@
+
 import carlosramirez.screenmach.modelos.Episodio;
 import carlosramirez.screenmach.modelos.Pelicula;
 import carlosramirez.screenmach.modelos.Serie;
@@ -6,13 +7,13 @@ import carlosramirez.screenmatch.calculos.FiltroRecomendacion;
 import java.util.ArrayList;
 
 public class Principal {
+
     public static void main(String[] args) {
         // Orientación de objetos
         // Llama a la clase Pelicula
-        Pelicula pelicula = new Pelicula("The Amazing Spider-Man");
+        Pelicula pelicula = new Pelicula("The Amazing Spider-Man", 2012);
 
         // Da información a las variables;
-        pelicula.setFechaDeLanzamiento(2012);
         pelicula.setDuracionEnMinutos(136);
 
         // Imprimir datos de la película
@@ -29,10 +30,8 @@ public class Principal {
         System.out.println("Media de evaluaciones de la película: " + pelicula.calculaMediaEvaluaciones());
 
         // Llama a la clase Serie
-        Serie serie = new Serie();
+        Serie serie = new Serie("The Last Of Us", 2012);
         // Información de la serie
-        serie.setNombre("The Last Of Us");
-        serie.setFechaDeLanzamiento(2012);
         serie.setTemporadas(2);
         serie.setMinutosPorEpisodio(59);
         serie.setEpisodiosPorTemporada(8);
@@ -42,9 +41,8 @@ public class Principal {
         System.out.println(serie.getDuracionEnMinutos());
 
         // Llama a la clase Pelicula (2)
-        Pelicula peliculaDos = new Pelicula("Orgullo y Prejuicio");
+        Pelicula peliculaDos = new Pelicula("Orgullo y Prejuicio", 2005);
         // Da información a las variables
-        peliculaDos.setFechaDeLanzamiento(2005);
         peliculaDos.setDuracionEnMinutos(128);
 
         // Llama a la clase CalculadoraDeTiempo
@@ -67,15 +65,14 @@ public class Principal {
 
         filtroRecomendacion.filtra(episodio);
 
-        var peliculaDeCarlos = new Pelicula("El Señor de los Anillos: El Retorno del Rey");
-        peliculaDeCarlos.setFechaDeLanzamiento(2001);
+        var peliculaDeCarlos = new Pelicula("El Señor de los Anillos: El Retorno del Rey", 2001);
         peliculaDeCarlos.setDuracionEnMinutos(180);
 
         ArrayList<Pelicula> listaDePeliculas = new ArrayList<>();
         listaDePeliculas.add(peliculaDeCarlos);
         listaDePeliculas.add(pelicula);
         listaDePeliculas.add(peliculaDos);
-        
+
         System.out.println("Tamaño de la lista de películas: " + listaDePeliculas.size());
         System.out.println("La primera película es: " + listaDePeliculas.get(0).getNombre());
 
