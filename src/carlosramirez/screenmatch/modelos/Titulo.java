@@ -1,4 +1,4 @@
-package carlosramirez.screenmach.modelos;
+package carlosramirez.screenmatch.modelos;
 
 public class Titulo {
 
@@ -24,7 +24,7 @@ public class Titulo {
     }
 
     // Método para evaluar las películas
-    public void evaluarPelicula(double nota) {
+    public void evalua(double nota) {
         sumaDeLasEvaluaciones += nota;
         totalDeLasEvaluaciones++;
     }

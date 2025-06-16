@@ -1,7 +1,8 @@
+package carlosramirez.screenmatch.principal;
 
-import carlosramirez.screenmach.modelos.Episodio;
-import carlosramirez.screenmach.modelos.Pelicula;
-import carlosramirez.screenmach.modelos.Serie;
+import carlosramirez.screenmatch.modelos.Episodio;
+import carlosramirez.screenmatch.modelos.Pelicula;
+import carlosramirez.screenmatch.modelos.Serie;
 import carlosramirez.screenmatch.calculos.CalculadoraDeTiempo;
 import carlosramirez.screenmatch.calculos.FiltroRecomendacion;
 import java.util.ArrayList;
@@ -19,9 +20,9 @@ public class Principal {
         // Imprimir datos de la película
         pelicula.muestraDatosDePelicula();
         // Evalua la película
-        pelicula.evaluarPelicula(9.5);
-        pelicula.evaluarPelicula(10);
-        pelicula.evaluarPelicula(9.8);
+        pelicula.evalua(9.5);
+        pelicula.evalua(10);
+        pelicula.evalua(9.8);
         pelicula.setIncluidoEnElPlan(true);
 
         // Muestra total de evaluaciones

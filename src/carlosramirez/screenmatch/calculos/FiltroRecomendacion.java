@@ -1,6 +1,8 @@
 package carlosramirez.screenmatch.calculos;
 
 public class FiltroRecomendacion {
+    private String recomendacion;
+
     //Métodos
     public void filtra(Clasificable clasificable){
         if (clasificable.getClasificacion() >= 4){

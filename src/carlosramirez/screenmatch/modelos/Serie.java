@@ -1,4 +1,4 @@
-package carlosramirez.screenmach.modelos;
+package carlosramirez.screenmatch.modelos;
 
 public class Serie extends Titulo {
 

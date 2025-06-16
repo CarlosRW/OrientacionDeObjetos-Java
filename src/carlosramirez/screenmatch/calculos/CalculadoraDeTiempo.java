@@ -1,6 +1,6 @@
 package carlosramirez.screenmatch.calculos;
 
-import carlosramirez.screenmach.modelos.Titulo;
+import carlosramirez.screenmatch.modelos.Titulo;
 
 public class CalculadoraDeTiempo {
     // Variables
