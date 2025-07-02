@@ -4,9 +4,7 @@ import carlosramirez.screenmatch.modelos.Pelicula;
 import carlosramirez.screenmatch.modelos.Serie;
 import carlosramirez.screenmatch.modelos.Titulo;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
+import java.util.*;
 
 public class PrincipalConListas {
     public static void main(String[] args) {
@@ -19,7 +17,9 @@ public class PrincipalConListas {
         peliculaDeCarlos.evalua(10);
         Serie serie = new Serie("The Last Of Us", 2012);
 
-        ArrayList<Titulo> lista = new ArrayList<>();
+        Pelicula p1 = pelicula;
+
+        List<Titulo> lista = new LinkedList<>();
         lista.add(pelicula);
         lista.add(peliculaDos);
         lista.add(peliculaDeCarlos);
