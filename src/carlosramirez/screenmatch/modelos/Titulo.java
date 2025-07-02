@@ -1,6 +1,6 @@
 package carlosramirez.screenmatch.modelos;
 
-public class Titulo {
+public class Titulo implements Comparable<Titulo>{
 
     // Variables
     private String nombre;
@@ -32,6 +32,11 @@ public class Titulo {
     // Método para calcular la media
     public double calculaMediaEvaluaciones() {
         return sumaDeLasEvaluaciones / totalDeLasEvaluaciones;
+    }
+
+    @Override
+    public int compareTo(Titulo otroTitulo ) {
+        return this.getNombre().compareTo(otroTitulo.getNombre());
     }
 
     // Getters & Setters
