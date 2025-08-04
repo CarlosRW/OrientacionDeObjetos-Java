@@ -1,9 +1,13 @@
 package carlosramirez.screenmatch.modelos;
 
+import com.google.gson.annotations.SerializedName;
+
 public class Titulo implements Comparable<Titulo>{
 
     // Variables
+    @SerializedName("Title")
     private String nombre;
+    @SerializedName("Year")
     private int fechaDeLanzamiento;
     private int duracionEnMinutos;
     private boolean incluidoEnElPlan = true;
@@ -14,6 +18,12 @@ public class Titulo implements Comparable<Titulo>{
     public Titulo(String nombre, int fechaDeLanzamiento) {
         this.fechaDeLanzamiento = fechaDeLanzamiento;
         this.nombre = nombre;
+    }
+
+    public Titulo(TituloOmdb miTituloOmdb) {
+        this.nombre = miTituloOmdb.title();
+        this.fechaDeLanzamiento = Integer.valueOf(miTituloOmdb.year());
+        this.duracionEnMinutos = Integer.valueOf(miTituloOmdb.runtime().substring(0, 2));
     }
 
     // Método para mostrar los datos de las películas
@@ -70,5 +80,12 @@ public class Titulo implements Comparable<Titulo>{
 
     public void setIncluidoEnElPlan(boolean incluidoEnElPlan) {
         this.incluidoEnElPlan = incluidoEnElPlan;
+    }
+
+    @Override
+    public String toString() {
+        return "Nombre: " + nombre + '\'' +
+                ", fechaDeLanzamiento: " + fechaDeLanzamiento + '\'' +
+                ", duracion: " + duracionEnMinutos;
     }
 }
